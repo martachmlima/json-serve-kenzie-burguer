@@ -15,6 +15,7 @@ Este é um exercício de criação de uma fake API que armazena usuários, seus 
 A API tem um total de 7 endpoints.
 
 Destes, 3 podem ser usados para cadastrar o usuário:
+
 POST /register <br/>
 POST /signup <br/>
 POST /users <br/>
@@ -25,11 +26,13 @@ POST /login <br/>
 POST /signin<br/>
 
 Um para o usuário cadastrar e acessar seus cursos:
+
 POST /courses <br/>
 GET /courses <br/>
 (obs: todos os usuários podem acessar os cursos registrados, mas apenas o usuário logado pode cadastrar um curso)
 
 E um para o usuário cadastrar e acessar seus hobbies:
+
 POST /hobbies <br/>
 GET /hobbies <br/>
 (obs: apenas usuários logados podem acessar os hobbies)
@@ -55,7 +58,7 @@ OBS: apenas os campos email e password são obrigatórios.
 
 Caso dê tudo certo, a resposta será assim:
 
-`POST /users - FORMATO DA RESPOSTA - STATUS 201`
+`POST /register - FORMATO DA RESPOSTA - STATUS 201`
 
 ```json
 {
@@ -122,11 +125,11 @@ Caso dê tudo certo, a resposta será assim:
 }
 ```
 
-    Nessa resposta temos o token de autenticação para as rotas em que ele é necessário e também o id do usuário, que será solicitado para criação de cursos e hobbies.
+<p>Nessa resposta temos o token de autenticação para as rotas em que ele é necessário e também o id do usuário, que será solicitado para criação de cursos e hobbies.</p>
 
 <h2 align ='center'> Buscar todos os cursos cadastrados </h2>
 
-Requisição não necessita de body
+Requisição não necessita de body.
 
 `GET /courses - FORMATO DA RESPOSTA - STATUS 200`
 
@@ -158,8 +161,10 @@ Requisição não necessita de body
 Rotas que necessitam de autorização deve ser informado no cabeçalho da requisição o campo "Authorization", dessa forma:
 
 > Authorization: Bearer {token}
-> Após o usuário estar logado, ele deve conseguir criar novos cursos, hobbies e acessar toda a lista de hobbies.
-> Também poderá acessar suas própias informações passando o id como parâmetro
+
+<p>Após o usuário estar logado, ele deve conseguir criar novos cursos, hobbies e acessar toda a lista de hobbies.</p>
+
+<p>Também poderá acessar suas própias informações passando o id como parâmetro.</p>
 
 <h2 align ='center'> Acessar seu pŕoprio perfil </h2>
 
