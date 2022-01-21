@@ -1,13 +1,9 @@
 <h1 align="center">
-Json Server Kenzie Burguer
+Json Server - Kenzie Burguer
 </h1>
 
 <p align = "center">
-Esta é uma fake API que permitem que usuários se cadastrem, façam login, vejam produtos disponíveis e guardem produtos nos seus carrinhos.
-</p>
-
-<p align="center">
-  <a href="#endpoints">Endpoints</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Esta é uma fake API que permite que usuários se cadastrem, façam login, vejam produtos disponíveis e guardem produtos nos seus carrinhos.
 </p>
 
 ## **Endpoints**
@@ -122,7 +118,7 @@ Caso dê tudo certo, a resposta será assim:
 }
 ```
 
-<p>Nessa resposta temos o token de autenticação para as rotas em que ele é necessário e também o id do usuário, que será solicitado para criação de cursos e hobbies.</p>
+<p>Nessa resposta temos o token de autenticação para as rotas em que ele é necessário, como gerenciar o carrinho.</p>
 
 <h2 align ='center'> Buscar os produtos cadastrados </h2>
 
@@ -201,9 +197,9 @@ Rotas que necessitam de autorização deve ser informado no cabeçalho da requis
 
 <h2 align ='center'> Deletar itens do carrinho </h2>
 
-`DELETE /cart/product_id - FORMATO DA REQUISIÇÃO`
-
 Requisição não necessita de body, apenas o id do produto que deve ser deletado é passado por parâmetro.
+
+`DELETE /cart/product_id - FORMATO DA REQUISIÇÃO`
 
 <h2 align ='center'> Buscar produtos que estão no carrinho </h2>
 
